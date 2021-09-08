@@ -1,0 +1,388 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Paaji 2', cursive;
+}
+.title-tag{
+    position: relative;
+    font-family: 'Baloo 2', cursive;
+   
+}
+.title-tag:before{
+    content:'' ;
+    position: absolute;
+    background-color: rgb(26, 26, 202);
+    left: 50%;
+    right: 0%;
+    width: 5%;
+    height: 4px;
+    top:92%;
+    transform: translateX(-50%);
+}
+@media (max-width:780px){
+    .title-tag:before{
+        width: 20%;
+    }
+}
+/*first div*/
+.icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+@media (max-width:760px){
+    .icon{
+        width: 100%;
+        font-size: 0.7rem;
+        padding: 1px;
+    }
+    .icon2{
+        font-size: 0.9rem;
+        margin-top: 1px;
+        width: 100%;
+        padding: 1px;
+    }
+}
+/*Navbar Start*/
+.navbar{
+    background:white;
+        height: 10vh;
+}
+.navbar-brand{
+    padding-left: 55px;
+}
+.icon3{
+    padding-left: -60px;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+.navbar-nav{
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding:3px;
+    color: black;
+}
+.nav-item{
+    position: relative;
+}
+.nav-item:before{
+    content: '';
+    position: absolute;
+    right: 0%;
+    left: 50%;
+    width: 0%;
+    background-color: rgb(66, 66, 231);
+    height: 4px;
+    transform: translateX(-50%);
+    transition: all 0.4s ease-in-out;
+    top: 75%;
+
+}
+.nav-item:hover:before{
+    width: 50%;
+}
+@media (max-width:780px){
+    .navbar-brand{
+        padding-left: 25px;
+    }
+        .navbar{
+        background-color: white;
+         height: 13vh;
+        }
+        .navbar-nav{
+     background-color: white;
+        }
+     }
+/*navbar end*/
+/*hero section start*/
+.container-fluids{
+    width: 100%;
+    height: 90vh;
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)) ,url(./Images/header\ section.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.heropage{
+    width: 100%;
+    padding: 160px 45px;
+}
+.rows{
+    width: 100%;
+    height: 100%;
+}
+.heropage h1  {
+   font-size: 3.4rem;
+   color: whitesmoke;
+   letter-spacing: 0.1rem;
+}
+.heropage h3{
+    font:3rem ;
+    color: whitesmoke;
+    font-weight: 800;
+}
+.pulsate{
+    animation: pulsate 3s ease-in-out;
+    animation-iteration-count: infinite;
+    opacity: .2;
+    color: black;
+}
+@-webkit-keyframes pulsate{
+       0%{
+           opacity: .3;
+       }
+       50%{
+           opacity: 1;
+       }
+       100%{
+           opacity: .3;
+       }
+}
+@media(max-width:780px){
+    .heropage h1  {
+        font-size: 2.9rem;
+      
+     }
+}
+
+/*welcome section start*/
+.welcome-text{
+    padding-top: 80px;
+    margin-top: 40px;
+    font-family: 'Baloo 2', cursive;
+    text-transform: capitalize;
+    font-size: 2.6rem;
+}
+
+@media (max-width:780px){
+    .welcome-text{
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+}
+/*end welcome section*/
+
+/*Service start*/
+.service-part{
+    display: flex;
+    padding: 30px;  
+}
+.service-icon{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.service-icon:hover{
+    transform: translateY(5%);
+}
+@media(max-width:780px){
+    .service-part{
+        flex-direction: column;
+        margin-left: 60px;
+        
+    }
+
+}
+/*end Service */
+
+/*Start Meet doctors*/
+.card{
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.btn3{
+    outline: none;
+}
+@media(max-width:780px){
+    .col-sm-3{
+        padding-left: 50px;
+    }
+    .title-tag{
+        margin-top: 0%;
+    }
+    .container{
+        margin-top: 1%;
+    }
+}
+@media(max-width:980px){
+    .col-sm-3{
+        padding-left: 65px;
+    }
+}
+/*client */
+.carousel-item{
+    padding: 5% 15%;
+    text-align: center;
+    font-style: italic;
+   
+}
+.feedback-img{
+    width: 120px;
+    height: 120px;
+    border: 2px solid black;
+}
+.carousel-indicators{
+    bottom: -20px;
+}
+.carousel-inner{
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./Images/meet\ cover.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/*end client review*/
+
+/*Start Gallery Seesion*/
+.rowss{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.column{
+    flex: 35.3%;
+    width: auto;
+    overflow: hidden;
+    padding: 0 10px;
+    width: 100%;
+}
+.column img{
+    margin-top: 6px;
+    width: 70%;
+    height: 50%;
+    cursor: pointer;
+    filter: grayscale(1) brightness(0.5);
+    border-radius: 5px;
+    transition: 0.3s linear;
+   
+}
+.column img:hover{
+    filter: grayscale(0) brightness(1);
+}
+/*end Gallery Seesion*/
+
+/*Start Appoienment*/
+.ripps{
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)), url(./Images/Appoinment.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media(max-width:790px){
+    .btn{
+       margin-bottom: 10px;
+    }
+}
+/*End Appoienment*/
+@media (max-width:780px){
+    .last-card{
+        padding-left: 50px; 
+    }
+}
+/*footer*/
+.last-footer{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)), url(./Images/Appoinment.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 30px;
+  
+}
+li{
+  list-style: none;
+  color: white;
+  cursor: pointer;
+  
+}
+.list-type{
+    font-family: 'Baloo 2', cursive;
+}
+.about-section {
+    padding-left: 25px; 
+}
+.social-icon{
+    margin-top: 40px;
+}
+.icon5{
+    font-size: 1.9rem;
+    color: white;
+    cursor: pointer;
+    padding:1%;
+}
+h6 span{
+    font-weight: bold;
+}
+.about-p{
+    font-family: 'Baloo 2', cursive;
+}
+@media(max-width:790px){
+    .about-section{
+        text-align: center;
+      
+    }
+    .social-icon{
+        margin-top: 1px;
+    }
+}
+/*Preloader start*/
+
+.preloader{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9999;
+    background-size: 10px;
+}
+.timeout{
+    animation: vanish 2s forwards;
+}
+.pre-img{
+    width: 530px;
+}
+
+@keyframes  vanish {
+  100%{
+       opacity: 0;
+       visibility:hidden;
+  }
+}
+/*Scroll button*/
+.to-top{
+    background: rgb(19, 19, 187);
+    position: fixed;
+    bottom: 16px;
+    right: 4px;
+    width: 36px;
+    height: 35px;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    color:white;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+
+}
+.to-top.active{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*End Scroll Button*/
